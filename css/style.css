@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  /* 1500 - 2 * 110 + 2 * 20 =1320 */
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+header {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  padding: 12px 0;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-brand {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* width: 100%; */
+}
+.hamburger-icon {
+  display: none !important;
+  font-size: 30px !important;
+}
+.nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+.nav-menu__link {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18.75px;
+  text-align: left;
+  color: rgba(82, 85, 96, 1);
+  transition: 0.5s;
+}
+.nav-menu__link:hover {
+  color: rgba(11, 7, 6, 1);
+}
+.nav-menu__btn {
+  padding: 12px 32px;
+  background-color: rgba(29, 33, 48, 1);
+  border-radius: 4px;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18.75px;
+  text-align: right;
+  color: rgba(255, 255, 255, 1);
+}
+
+.section-bg {
+  background-image: url("../images/section-bg/BG.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 384px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 36px 0;
+}
+.section-bg__h1 {
+  font-family: Roboto;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 57.6px;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+  width: 631px;
+  padding-bottom: 32px;
+}
+.section-bg__btn {
+  display: flex;
+  gap: 32px;
+}
+.section--btn {
+  border-radius: 4px;
+  padding: 16px 32px;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18.75px;
+  text-align: right;
+  border: none;
+}
+.section--btn__success {
+  background-color: rgba(112, 193, 116, 1);
+  color: rgba(255, 255, 255, 1);
+}
+.section--btn__light {
+  color: rgba(29, 33, 48, 1);
+}
+
+@media (max-width: 820px) {
+  nav {
+    display: block;
+    /* flex-direction: column; */
+  }
+  .hamburger-icon {
+    display: block !important;
+  }
+  .nav-menu {
+    display: none;
+    padding-top: 20px;
+  }
+  .active {
+    display: flex;
+  }
+
+  .section-bg__h1 {
+    width: 100%;
+  }
+}
+@media (max-width: 650px) {
+  .nav-menu {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
